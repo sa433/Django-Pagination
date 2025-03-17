@@ -9,4 +9,5 @@ def home(request):
     page_number = request.GET.get('page')
     print("page_number = ",page_number)
     page_obj = pag.get_page(page_number)
+    print("page_obj ", page_obj)
     return render(request, 'myapp/home.html', {'page_obj':page_obj})
